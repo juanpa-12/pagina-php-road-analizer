@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de AggreBind</title>
+    <link rel="stylesheet" href="css/compra.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="logo">
+            <a href="#">AggreBind</a>
+        </div>
+        <div class="main_list">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#compra">Comprar</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="inicio" class="home">
+        <div class="containere">
+            <h1>¡Bienvenido a AggreBind!</h1>
+            <p>La mejor solución para la estabilización de suelos y construcción sostenible.</p>
+        </div>
+    </section>
+
+    <section id="compra" class="containere">
+        <h1>Formulario de Compra</h1>
+        <form action="procesar_compra.php" method="POST">
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+
+            <label for="correo">Correo Electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo" required>
+
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu teléfono" required>
+
+            <label for="cantidad">Cantidad de AggreBind</label>
+            <input type="number" id="cantidad" name="cantidad" placeholder="Ingresa la cantidad" min="1" required>
+
+            <label for="mensaje">Mensaje Adicional (opcional)</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Incluye detalles adicionales..."></textarea>
+
+        </form>
+    </section>
+    <div class="container">
+        <h1>Formulario de Compra</h1>
+        <form>
+            <label for="document-type">Tipo de documento</label>
+            <select id="document-type" required>
+                <option value="" disabled selected>Seleccione un tipo</option>
+                <option value="cc">Cédula de ciudadanía</option>
+                <option value="ce">Cédula de extranjería</option>
+                <option value="passport">Pasaporte</option>
+            </select>
+    
+            <label for="document-id">Número de documento</label>
+            <input type="text" id="document-id" placeholder="Número de documento" required />
+    
+            <label for="name">Nombre del titular</label>
+            <input type="text" id="name" placeholder="Nombre completo" required />
+    
+            <label for="card-number">Número de tarjeta</label>
+            <input type="text" id="card-number" placeholder="#### #### #### ####" maxlength="19" required />
+    
+            <div class="card-fields">
+                <div>
+                    <label for="expiry">Fecha de vencimiento</label>
+                    <input type="date" id="expiry" required />
+                </div>
+                <div>
+                    <label for="cvv">CVV</label>
+                    <input type="password" id="cvv" placeholder="###" maxlength="4" required />
+                </div>
+            </div>
+    
+            <label for="address">Dirección de envío</label>
+            <textarea id="address" placeholder="Calle, número, ciudad, código postal" required></textarea>
+    
+</body>
+
+</html>
